@@ -4,5 +4,6 @@ src-tauri/target/
 .DS_Store
 *.log
 
-_tmp
+_tmp/
 *.code-workspace
+prompts/
