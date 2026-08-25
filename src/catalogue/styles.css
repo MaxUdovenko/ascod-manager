@@ -1,0 +1,86 @@
+.directory-name-button {
+  background: transparent;
+  border: 0;
+  color: #1e293b;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+}
+
+.directory-name-button:hover .directory-folder-name {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.directory-title-stack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.directory-document-name {
+  color: #000080;
+  font-size: calc(0.76rem + 3pt);
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+#directory-table thead th {
+  border-bottom-color: #e2e8f0;
+  color: #64748b;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  padding-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+#directory-table thead .directory-filter-row th {
+  padding-bottom: 0.65rem;
+  padding-top: 0;
+}
+
+#directory-table .directory-column-filter {
+  color: #475569;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  min-width: 7.5rem;
+  text-transform: none;
+  width: 100%;
+}
+
+#directory-table tbody td {
+  border-color: #eef2f7;
+  color: #475569;
+  font-size: 0.83rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+#directory-table tbody tr.directory-row--in-progress td,
+#directory-table tbody tr.directory-row--in-progress .directory-name-button,
+#directory-table tbody tr.directory-row--in-progress .directory-name {
+  color: #dc2626;
+}
+
+.directory-name {
+  align-items: center;
+  color: #1e293b;
+  display: flex;
+  font-weight: 600;
+  gap: 0.45rem;
+  padding-left: min(calc(var(--directory-depth) * 1.1rem), 7rem);
+}
+
+.tree-chevron {
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+.folder-icon {
+  color: #3b82f6;
+  font-size: 1.15rem;
+}

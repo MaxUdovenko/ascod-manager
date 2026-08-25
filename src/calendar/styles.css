@@ -1,0 +1,108 @@
+.calendar-page {
+  min-height: 100%;
+}
+
+.calendar-card {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 30px rgb(15 23 42 / 5%);
+  overflow: hidden;
+}
+
+.calendar-card .card-body {
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.calendar-loading {
+  align-items: center;
+  color: #64748b;
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  min-height: 26rem;
+}
+
+.calendar-event-content {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.calendar-event-status {
+  align-items: center;
+  background: rgb(255 255 255 / 92%);
+  border-radius: 50%;
+  color: #dc3545;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.68rem;
+  font-weight: 900;
+  height: 1rem;
+  justify-content: center;
+  line-height: 1;
+  width: 1rem;
+}
+
+.calendar-card .fc .fc-button-primary {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.calendar-card .fc .fc-button-primary:hover,
+.calendar-card .fc .fc-button-primary:focus {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.calendar-card .fc .fc-calendarPrev-button,
+.calendar-card .fc .fc-calendarNext-button {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-width: 3.5rem;
+}
+
+.calendar-card .fc .fc-calendarPrev-button::before,
+.calendar-card .fc .fc-calendarNext-button::before {
+  border-color: currentColor;
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 0.72rem;
+  width: 0.72rem;
+}
+
+.calendar-card .fc .fc-calendarPrev-button::before {
+  border-width: 0 0 0.16rem 0.16rem;
+  transform: rotate(45deg);
+}
+
+.calendar-card .fc .fc-calendarNext-button::before {
+  border-width: 0.16rem 0.16rem 0 0;
+  transform: rotate(45deg);
+}
+
+.calendar-card .fc .fc-toolbar-title {
+  color: #111827;
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+}
+
+.calendar-card .fc .fc-col-header-cell-cushion,
+.calendar-card .fc .fc-daygrid-day-number {
+  color: #334155;
+  text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  .calendar-card .fc .fc-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .calendar-card .fc .fc-toolbar-chunk {
+    text-align: center;
+  }
+}

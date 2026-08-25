@@ -1,0 +1,396 @@
+:root {
+  color: #1f2937;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --app-primary: #2563eb;
+  --app-primary-dark: #1d4ed8;
+  --app-sidebar: #111827;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-icon,
+.brand-mark__icon,
+.folder-icon,
+.nav-icon,
+.sidebar-logo__icon,
+.tree-chevron {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.app-icon svg,
+.brand-mark__icon svg,
+.folder-icon svg,
+.nav-icon svg,
+.sidebar-logo__icon svg,
+.tree-chevron svg {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.launch-screen {
+  align-items: center;
+  background:
+    radial-gradient(circle at 18% 12%, rgb(59 130 246 / 14%), transparent 32rem),
+    radial-gradient(circle at 84% 88%, rgb(37 99 235 / 10%), transparent 28rem),
+    #f5f7fb;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.launch-card {
+  background: rgb(255 255 255 / 94%);
+  border: 1px solid #e5eaf2;
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 60px rgb(15 23 42 / 10%);
+  max-width: 38rem;
+  padding: clamp(2.25rem, 6vw, 4.25rem);
+  text-align: center;
+  width: 100%;
+}
+
+.launch-card--loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brand-mark {
+  align-items: center;
+  background: linear-gradient(145deg, #2563eb, #1e40af);
+  border-radius: 1rem;
+  box-shadow: 0 12px 25px rgb(37 99 235 / 25%);
+  color: #fff;
+  display: inline-flex;
+  height: 4.5rem;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  width: 4.5rem;
+}
+
+.brand-mark__icon {
+  font-size: 2.3rem;
+}
+
+.eyebrow {
+  color: var(--app-primary);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.launch-card h1 {
+  font-size: clamp(1.8rem, 5vw, 2.55rem);
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  margin-bottom: 1rem;
+}
+
+.launch-description {
+  color: #64748b;
+  font-size: 1.03rem;
+  line-height: 1.7;
+  margin: 0 auto 2rem;
+  max-width: 29rem;
+}
+
+.launch-description code {
+  background: #eff6ff;
+  border-radius: 0.35rem;
+  color: var(--app-primary-dark);
+  padding: 0.12rem 0.35rem;
+}
+
+.open-project-button,
+#refresh-project {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55rem;
+  justify-content: center;
+}
+
+.open-project-button {
+  box-shadow: 0 8px 18px rgb(37 99 235 / 22%);
+  font-size: 1rem;
+  padding: 0.78rem 1.35rem;
+}
+
+.privacy-note {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin: 1.5rem 0 0;
+}
+
+.app-header {
+  min-height: 3.75rem;
+}
+
+#main-nav-top-menu {
+  position: sticky;
+  top: 0;
+  z-index: 1035;
+}
+
+.icon-button {
+  align-items: center;
+  background: none;
+  border: 0;
+  display: inline-flex;
+  font-size: 1.3rem;
+}
+
+.header-project {
+  align-items: center;
+  color: #475569;
+  display: flex;
+  font-size: 0.86rem;
+  font-weight: 600;
+  gap: 0.55rem;
+}
+
+.header-project__status {
+  background: #22c55e;
+  border: 3px solid #dcfce7;
+  border-radius: 50%;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.app-sidebar {
+  background: var(--app-sidebar) !important;
+}
+
+.sidebar-brand {
+  border-bottom-color: rgb(255 255 255 / 9%);
+}
+
+.brand-link {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  padding-left: 1rem;
+}
+
+.sidebar-logo {
+  align-items: center;
+  background: #2563eb;
+  border-radius: 0.5rem;
+  color: white;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.sidebar-logo__icon {
+  font-size: 1.15rem;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu .nav-link {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+}
+
+.sidebar-menu .nav-link.active {
+  background: #2563eb;
+  box-shadow: none;
+}
+
+.sidebar-menu .nav-link p {
+  margin: 0;
+}
+
+.nav-icon {
+  font-size: 1.05rem;
+  margin-left: 0.15rem;
+}
+
+.nav-header {
+  color: #64748b !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-footer-project {
+  border-top: 1px solid rgb(255 255 255 / 9%);
+  bottom: 0;
+  color: #6b7280;
+  font-size: 0.72rem;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.sidebar-version {
+  color: #94a3b8;
+}
+
+.app-main {
+  background: #f5f7fb;
+}
+
+.app-content-header {
+  padding: 2.15rem 0 1.35rem;
+}
+
+.content-heading {
+  align-items: flex-end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.content-heading h1 {
+  color: #111827;
+  font-size: 1.85rem;
+  font-weight: 720;
+  letter-spacing: -0.035em;
+}
+
+.directory-card {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 30px rgb(15 23 42 / 5%);
+  overflow: hidden;
+}
+
+.directory-card .card-header {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 1.4rem 0.8rem;
+}
+
+.directory-card .card-body {
+  padding: 0.5rem 1.4rem 1.3rem;
+}
+
+.rename-modal {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 2000;
+}
+
+.rename-modal__backdrop {
+  background: rgb(15 23 42 / 45%);
+  inset: 0;
+  position: absolute;
+}
+
+.rename-modal__dialog {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  box-shadow: 0 24px 70px rgb(15 23 42 / 22%);
+  max-width: 28rem;
+  padding: 1.35rem;
+  position: relative;
+  width: calc(100% - 2rem);
+}
+
+.rename-modal__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.rename-modal__header h2 {
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.rename-modal__close {
+  background: transparent;
+  border: 0;
+  color: #94a3b8;
+  font-size: 1.45rem;
+  line-height: 1;
+  padding: 0.1rem 0.25rem;
+}
+
+.rename-modal__actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.dt-container .dt-search input,
+.dt-container .dt-length select {
+  border-color: #dbe2ea;
+  border-radius: 0.45rem;
+  font-size: 0.8rem;
+}
+
+.dt-container .dt-info,
+.dt-container .dt-length,
+.dt-container .dt-search,
+.dt-container .dt-paging {
+  color: #64748b;
+  font-size: 0.76rem;
+}
+
+.pagination-top-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767.98px) {
+  .launch-screen {
+    padding: 1rem;
+  }
+
+  .launch-card {
+    padding: 2.25rem 1.35rem;
+  }
+
+  .content-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #refresh-project {
+    align-self: flex-start;
+  }
+
+  .directory-card .card-header {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

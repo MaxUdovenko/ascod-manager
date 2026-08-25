@@ -1,0 +1,22 @@
+[package]
+name = "ascod-project-manager"
+version = "0.2.0"
+description = "Local project directory manager"
+authors = ["ASCOD"]
+edition = "2021"
+
+[lib]
+name = "ascod_project_manager_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+rusqlite = { version = "0.37", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+trash = "5"

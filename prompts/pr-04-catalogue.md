@@ -1,0 +1,1 @@
+Improve `Каталоги` page view, so if user click item and redirected to `Profile` page it can return to `Каталоги` with the same state without renewing page to continue work with table
