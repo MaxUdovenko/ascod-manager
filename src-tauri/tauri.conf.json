@@ -13,6 +13,7 @@
     "windows": [
       {
         "title": "ASCOD Project Manager",
+        "theme": "Light",
         "width": 1280,
         "height": 820,
         "minWidth": 900,
